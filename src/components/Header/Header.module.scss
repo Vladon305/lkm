@@ -1,0 +1,11 @@
+.container {
+  @apply flex justify-between;
+
+  .menu {
+    @apply flex;
+
+    &__item {
+      @apply p-4;
+    }
+  }
+}

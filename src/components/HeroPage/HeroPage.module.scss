@@ -1,0 +1,99 @@
+._white__text {
+  @apply text-white;
+}
+
+.container {
+  @apply my-32;
+
+  .text {
+    @apply text-lightGray; //text-8xl
+    font-family: Plus Jakarta Sans;
+    font-size: 85px;
+    font-weight: 700;
+    line-height: 107px;
+    letter-spacing: -0.06em;
+    text-align: left;
+    text-align: center;
+  }
+
+  .realization {
+    @apply mb-16;
+    transform: rotate(7deg);
+    color: #fff;
+    z-index: 2;
+  }
+
+  .yours__container {
+    @apply relative top-0 left-[300px] inline-block;
+
+    .yours {
+      width: 336px;
+      border-radius: 16px;
+      transform: rotate(-2.31deg);
+      /* rotation: 2.31 deg; */
+
+      background: linear-gradient(318.55deg, #04e3ac 42.85%, #72eecf 78.61%);
+      @apply max-w-80 max-h-28 p-2 flex items-center justify-center;
+    }
+    .thunder {
+      @apply absolute;
+    }
+    .thunderLeft {
+      @apply top-[75px] left-[-150px];
+    }
+    .thunderRight {
+      @apply top-[-75px] left-[300px];
+    }
+  }
+  .ideas__container {
+    @apply relative top-20 left-[275px] inline-block;
+
+    .ideas {
+      width: 345px;
+      height: 121px;
+      border-radius: 16px;
+      transform: rotate(4.26deg);
+      /* rotatione: -4.26 deg; */
+
+      background: linear-gradient(63.5deg, #c7fb03 42.26%, #ddff5f 83.58%);
+    }
+  }
+}
+
+.offer__container {
+  @apply flex justify-end items-center gap-10;
+
+  .offer {
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: -0.06em;
+    text-align: left;
+  }
+
+  .start {
+    @apply flex justify-center items-center;
+
+    width: 160px;
+    height: 50px;
+    top: 753px;
+    left: 1079.83px;
+    padding: 14px, 8px, 14px, 8px;
+    border-radius: 16px;
+    gap: 8px;
+    background: #fff;
+
+    .start__text {
+      font-family: Plus Jakarta Sans;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0em;
+      color: #000;
+    }
+  }
+}
+.center__text {
+  @apply flex justify-center items-center;
+}
