@@ -1,8 +1,9 @@
 import "./App.scss";
 import Card from "./components/ui/Card/Card";
 import Header from "./components/Header/Header";
-import HeroPage from "./components/HeroPage/HeroPage";
 import DefaultButton from "./components/ui/DefaultButton/DefaultButton";
+import whiteAngle from "./assets/whiteAngle.svg";
+import { ThunderLeft, ThunderRight } from "./assets";
 
 function App() {
   const cards = [
@@ -30,24 +31,54 @@ function App() {
   return (
     <div className="page">
       <div className="container">
-        <HeroPage />
+        {/* <HeroPage /> */}
 
-        {/* <div className="introduction">
+        <div className="introduction">
           <div className="introduction__header">
             <Header />
           </div>
           <div className="introduction__main">
-            <div className="introduction__styled-heading"></div>
-            <div className="introduction__styled-heading"></div>
-            <div className="introduction__styled-heading"></div>
+            <div className="introduction__styled-heading">
+              <div className="introduction__text introduction__realization">
+                воплощение
+              </div>
+            </div>
+            <div className="introduction__styled-heading">
+              <div className="introduction__styled-heading_yours">
+                <div className="thunder">
+                  <img
+                    src={ThunderLeft}
+                    alt="thunder left"
+                    className="thunder__image thunder__image_left"
+                  />
+                </div>
+                <div className="introduction__text introduction__text_yours">
+                  <div>ваших</div>
+                </div>
+                <div className="thunder">
+                  <img
+                    src={ThunderRight}
+                    alt="thunder right"
+                    className="thunder__image thunder__image_right"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="introduction__styled-heading">
+              <div className="introduction__text introduction__text_ideas">
+                идей
+              </div>
+            </div>
           </div>
           <div className="introduction__footer">
-            <div className="introduction__text">Давайте обсудим ваш проект</div>
+            <div className="introduction__text introduction__text_offer">
+              Давайте обсудим ваш проект
+            </div>
             <div className="introduction__button">
               <DefaultButton text="Начать проект" />
             </div>
           </div>
-        </div> */}
+        </div>
 
         {/* <div className="why_us_grid">
           <div className="col-span-2">
@@ -112,7 +143,11 @@ function App() {
 
         <div className="services">
           <div className="services__card">
-            <Card title="Услуги" template="yellow" />
+            <Card
+              title="Услуги"
+              template="yellow"
+              angleSettings={{ src: whiteAngle }}
+            />
           </div>
           <div className="services__text-container">
             <div className="services__text">- Важно не то,</div>
@@ -140,7 +175,7 @@ function App() {
 
         <div className="our-work">
           <div className="our-work__card">
-            <Card title="Наши работы" />
+            <Card title="Наши работы" template="yellow" />
           </div>
           <div className="our-work__row">
             <div className="our-work__work-item">

@@ -1,0 +1,15 @@
+.angle {
+  @apply absolute;
+}
+.left-top {
+  @apply absolute top-0 left-0;
+}
+.right-top {
+  @apply absolute top-0 right-0;
+}
+.left-bottom {
+  @apply absolute bottom-0 left-0;
+}
+.right-bottom {
+  @apply absolute bottom-0 right-0;
+}

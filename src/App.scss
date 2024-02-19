@@ -4,6 +4,81 @@
   .container {
     @apply max-w-7xl mx-auto;
 
+    .introduction {
+      .introduction__header {
+        @apply p-4;
+      }
+      .introduction__main {
+        @apply mt-32 mb-80;
+      }
+      .introduction__styled-heading {
+        @apply relative top-0 left-0 inline-block;
+      }
+      .thunder {
+      }
+      .thunder__image {
+        @apply absolute;
+      }
+      .thunder__image_left {
+        @apply top-[75px] left-[-150px];
+      }
+      .thunder__image_right {
+        @apply top-[-75px] left-[300px];
+      }
+      .introduction__text {
+        @apply text-lightGray; //text-8xl
+        font-family: Plus Jakarta Sans;
+        font-size: 85px;
+        font-weight: 700;
+        line-height: 107px;
+        letter-spacing: -0.06em;
+        text-align: left;
+        text-align: center;
+      }
+
+      .introduction__realization {
+        @apply relative -top-16 left-[360px];
+        transform: rotate(7deg);
+        color: #fff;
+        z-index: 2;
+      }
+      .introduction__styled-heading_yours {
+        @apply relative top-36 -left-32;
+      }
+      .introduction__text_yours {
+        @apply max-w-80 max-h-28 p-2 flex items-center justify-center;
+        width: 336px;
+        border-radius: 16px;
+        transform: rotate(-2.31deg);
+        /* rotation: 2.31 deg; */
+
+        background: linear-gradient(318.55deg, #04e3ac 42.85%, #72eecf 78.61%);
+      }
+      .introduction__text_ideas {
+        @apply relative top-60 -left-36 rounded-2xl;
+
+        width: 345px;
+        height: 121px;
+        transform: rotate(4.26deg);
+
+        background: linear-gradient(63.5deg, #c7fb03 42.26%, #ddff5f 83.58%);
+      }
+      .introduction__text_offer {
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: -0.06em;
+        text-align: left;
+        color: #fff;
+      }
+      .introduction__footer {
+        @apply flex justify-end items-center gap-10;
+      }
+      .introduction__button {
+      }
+    }
+
     .why-us {
       .why-us__grid-container {
         @apply grid grid-cols-3 gap-4 gap-x-40;
