@@ -4,6 +4,7 @@ import stylesWork from "./CardWork.module.scss";
 import stylesContacts from "./CardContacts.module.scss";
 import stylesProject from "./CardProject.module.scss";
 import stylesAngle from "./Angle.module.scss";
+import stylesCardSlice from "./CardSlice.module.scss";
 import InscriptionBlock from "../../../assets/InscriptionBlock.svg";
 import BlackCircle from "../../../assets/blackCircle.svg";
 
@@ -36,7 +37,12 @@ const Card = ({
   style,
 }: Props) => {
   return (
-    <div className={styles[template].card} style={style}>
+    <div
+      className={`${styles[template].card} ${
+        stylesCardSlice[angleSettings?.position || "right-bottom"]
+      }`}
+      style={style}
+    >
       <div className={styles[template].title}>{title}</div>
       {angleSettings?.src && (
         <div className={stylesAngle[angleSettings.position || "right-bottom"]}>

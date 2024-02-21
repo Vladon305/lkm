@@ -2,8 +2,7 @@ import "./App.scss";
 import Card from "./components/ui/Card/Card";
 import Header from "./components/Header/Header";
 import DefaultButton from "./components/ui/DefaultButton/DefaultButton";
-import whiteAngle from "./assets/whiteAngle.svg";
-import { ThunderLeft, ThunderRight } from "./assets";
+import { ThunderLeft, ThunderRight, classicWhiteAngle } from "./assets";
 
 function App() {
   const cards = [
@@ -146,7 +145,7 @@ function App() {
             <Card
               title="Услуги"
               template="yellow"
-              angleSettings={{ src: whiteAngle }}
+              angleSettings={{ src: classicWhiteAngle }}
             />
           </div>
           <div className="services__text-container">

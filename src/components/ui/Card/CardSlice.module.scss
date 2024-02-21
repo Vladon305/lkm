@@ -1,0 +1,24 @@
+.left-top {
+  @apply absolute top-0 left-0;
+}
+.right-top {
+  @apply absolute top-0 right-0;
+}
+.left-bottom {
+  @apply absolute bottom-0 left-0;
+}
+.right-bottom {
+  /* -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 75% 0);
+  clip-path: polygon(0 0, 0 100%, 75% 100%, 100% 75%, 100% 0); */
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 38px solid #00303c;
+    border-left: 38px solid transparent;
+    border-radius: 0px;
+    width: 0;
+    transform: rotate(90deg);
+  }
+}
