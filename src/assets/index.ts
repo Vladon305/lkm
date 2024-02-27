@@ -5,6 +5,8 @@ import Site from "./icon-site.svg";
 import Robot from "./icon-robot.svg";
 import Email from "./icon-email.svg";
 import BlackCircle from "./blackCircle.svg";
+import Scribble from "./scribble.svg";
+import BigScribble from "./big-scribble.svg";
 import ThunderRight from "./thunder_1.svg";
 import ThunderLeft from "./Thunder_2.svg";
 import InscriptionBlock from "./InscriptionBlock.svg";
@@ -27,6 +29,8 @@ export {
   ThunderRight,
   InscriptionBlock,
   BlackCircle,
+  BigScribble,
+  Scribble,
   Cube,
   Abstract,
   Telegram,

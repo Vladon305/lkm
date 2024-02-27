@@ -5,11 +5,13 @@
     @apply max-w-7xl mx-auto;
 
     .introduction {
+      @apply mb-32;
+
       .introduction__header {
         @apply p-4;
       }
       .introduction__main {
-        @apply mt-32 mb-80;
+        @apply mt-32 mb-[30rem];
       }
       .introduction__styled-heading {
         @apply relative top-0 left-0 inline-block;
@@ -50,9 +52,6 @@
         width: 336px;
         border-radius: 16px;
         transform: rotate(-2.31deg);
-        /* rotation: 2.31 deg; */
-
-        background: linear-gradient(318.55deg, #04e3ac 42.85%, #72eecf 78.61%);
       }
       .introduction__text_ideas {
         @apply relative top-60 -left-36 rounded-2xl;
@@ -60,8 +59,6 @@
         width: 345px;
         height: 121px;
         transform: rotate(4.26deg);
-
-        background: linear-gradient(63.5deg, #c7fb03 42.26%, #ddff5f 83.58%);
       }
       .introduction__text_offer {
         font-family: Plus Jakarta Sans;
@@ -80,63 +77,200 @@
     }
 
     .why-us {
-      .why-us__grid-container {
-        @apply grid grid-cols-3 gap-4 gap-x-40;
+      @apply pt-24 my-64;
+
+      .why-us__container {
+        @apply flex justify-between;
+      }
+      .why-us__left-content {
+        @apply flex flex-col justify-between;
       }
       .why-us__card {
-        @apply col-span-2;
+        /* @apply col-span-2 row-span-1; */
       }
       .why-us__card-column {
-        @apply row-span-5;
-
+        /* @apply row-span-5 col-span-2; */
+        //row-start-1 col-start-2
         .why-us__item {
-          @apply mb-10;
+          @apply flex justify-end;
+
+          &:nth-child(1) {
+            @apply mr-20 -rotate-[3deg];
+          }
+          &:nth-child(2) {
+            @apply rotate-1;
+          }
+          &:nth-child(3) {
+            @apply mr-10 rotate-[4deg];
+          }
+          &:nth-child(4) {
+            @apply mr-14 -rotate-[4deg];
+          }
         }
       }
       .why-us__text-container {
-        @apply row-start-4;
+        @apply row-start-3 col-span-2;
+
+        font-family: Plus Jakarta Sans;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 50px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
 
         .why-us__text {
+          &:last-child {
+            @apply ml-20;
+          }
         }
       }
       .why-us__button {
-        @apply row-start-3;
+        @apply mb-28;
       }
     }
 
     .services {
+      @apply my-36;
+      .services__card {
+        @apply mr-7 flex justify-end items-center;
+      }
+      .services__text-container {
+        @apply my-14 mt-24;
+
+        font-family: Plus Jakarta Sans;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 50px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+      }
+      .services__text:nth-child(3n - 1) {
+        @apply ml-20;
+      }
+      .services__text:last-child {
+        @apply ml-60;
+      }
+      .services__cards {
+        @apply relative my-40;
+      }
+      .services__service-card {
+        @apply relative inline-block top-0 left-0;
+
+        &:nth-child(n) {
+          @apply -rotate-6;
+        }
+        &:nth-child(2n) {
+          @apply top-40 left-12 rotate-[4deg];
+        }
+        &:nth-child(3n) {
+          @apply -top-8 -left-4 rotate-[9deg];
+        }
+        &:nth-child(4n) {
+          @apply top-24 left-[48rem] -rotate-3;
+        }
+      }
+      .services__button {
+        @apply flex justify-end items-center;
+      }
     }
-    .services__card {
-    }
-    .services__text-container {
-    }
-    .services__text {
-    }
-    .services__cards {
-    }
-    .services__button {
-    }
+
     .our-work {
+      @apply my-24;
+
+      .our-work__card {
+        @apply my-24 flex justify-end items-center;
+      }
+      .our-work__row {
+        @apply flex gap-8 my-14;
+      }
+      .our-work__work-item {
+      }
+      .our-work__button {
+        @apply flex justify-center items-center;
+      }
     }
-    .our-work__card {
-    }
-    .our-work__row {
-    }
-    .our-work__work-item {
-    }
+
     .end-section {
-    }
-    .end-section__header {
-    }
-    .end-section__item {
-    }
-    .end-section__center {
-    }
-    .end-section__button {
-    }
-    .end-section__contacts {
-    }
-    .end-section__footer {
+      .end-section__header {
+        @apply text-lightGray my-60; //text-8xl
+        font-family: Plus Jakarta Sans;
+        font-size: 85px;
+        font-weight: 700;
+        line-height: 107px;
+        letter-spacing: -0.06em;
+        text-align: left;
+        text-align: center;
+      }
+      .end-section__styled-heading {
+        @apply relative top-0 left-0 inline-block;
+      }
+      .end-section__item {
+        @apply p-2 flex items-center justify-center;
+        height: 135px;
+        width: 450px;
+        border-radius: 16px;
+      }
+      .end-section__come-on {
+        @apply relative top-1 -left-4 bg-mainColor;
+        font-family: Plus Jakarta Sans;
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        transform: rotate(10deg);
+      }
+      .end-section__work {
+        @apply relative top-0 right-4;
+        font-family: Plus Jakarta Sans;
+        font-size: 85px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        transform: rotate(-9deg);
+      }
+      .end-section__together {
+        @apply relative top-16 -left-10;
+        font-family: Plus Jakarta Sans;
+        font-size: 85px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        transform: rotate(4deg);
+      }
+      .end-section__center {
+        @apply mb-52;
+      }
+      .end-section__button {
+        @apply flex justify-center items-center my-40;
+      }
+      .end-section__contacts {
+        @apply -rotate-[8deg] flex justify-center items-center;
+      }
+      .end-section__footer {
+      }
     }
   }
+}
+
+.text-green {
+  background: linear-gradient(318.55deg, #04e3ac 42.85%, #72eecf 78.61%);
+}
+.text-yellow {
+  background: linear-gradient(63.5deg, #c7fb03 42.26%, #ddff5f 83.58%);
+}
+
+.text-style {
+  @apply text-lightGray; //text-8xl
+  font-family: Plus Jakarta Sans;
+  font-size: 85px;
+  font-weight: 700;
+  line-height: 107px;
+  letter-spacing: -0.06em;
+  text-align: left;
+  text-align: center;
 }

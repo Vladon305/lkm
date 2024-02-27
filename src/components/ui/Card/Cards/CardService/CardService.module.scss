@@ -1,0 +1,21 @@
+.card {
+  @apply py-7 px-24 rounded-xl inline-block relative;
+  font-family: Plus Jakarta Sans;
+  background-color: #fff;
+  text-align: center;
+
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #00252e;
+  }
+  .text {
+    font-size: 40px;
+    font-weight: 700;
+    color: #00252e;
+  }
+
+  .icon {
+    @apply absolute -top-[2.75rem] -left-[2.75rem] w-[70px];
+  }
+}

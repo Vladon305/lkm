@@ -1,0 +1,38 @@
+.card {
+  @apply inline-block py-12 px-16 rounded-2xl relative flex flex-col gap-y-5;
+  font-family: Plus Jakarta Sans;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: -0.06em;
+  text-align: left;
+
+  background: linear-gradient(65.99deg, #c7fb03 53.45%, #e4ff80 99.18%);
+
+  .scribble {
+    @apply flex justify-center items-center;
+  }
+
+  .blackCircle {
+    @apply absolute top-4 right-4;
+  }
+  .content {
+    @apply flex justify-between;
+  }
+  .left__content {
+    @apply flex flex-col gap-5;
+  }
+  .icons {
+    @apply flex self-end;
+    .icon {
+    }
+  }
+  .title {
+    font-family: Plus Jakarta Sans;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 69px;
+    letter-spacing: -0.06em;
+    text-align: left;
+  }
+}

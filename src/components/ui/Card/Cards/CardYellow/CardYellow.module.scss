@@ -1,0 +1,25 @@
+.card {
+  @apply inline-block py-12 px-16 rounded-2xl relative;
+  font-family: Plus Jakarta Sans;
+  font-size: 85px;
+  font-weight: 700;
+  line-height: 99px;
+  letter-spacing: -0.06em;
+
+  background: linear-gradient(65.99deg, #c7fb03 53.45%, #e4ff80 99.18%);
+
+  .card__container {
+    @apply flex flex-col justify-center items-center;
+
+    .scribble {
+      @apply flex justify-center items-center;
+    }
+
+    .blackCircle {
+      @apply absolute top-4 left-4;
+    }
+
+    .title {
+    }
+  }
+}

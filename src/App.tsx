@@ -1,8 +1,16 @@
 import "./App.scss";
-import Card from "./components/ui/Card/Card";
+import { Card, DefaultButton } from "./components/ui";
 import Header from "./components/Header/Header";
-import DefaultButton from "./components/ui/DefaultButton/DefaultButton";
-import { ThunderLeft, ThunderRight, classicWhiteAngle } from "./assets";
+import {
+  ThunderLeft,
+  ThunderRight,
+  classicWhiteAngle,
+  Site,
+  Robot,
+  Cube,
+  Abstract,
+} from "./assets";
+import { workImage1, workImage2, workImage3 } from "./assets/workImages";
 
 function App() {
   const cards = [
@@ -27,6 +35,7 @@ function App() {
       text: "Лучшая поддержка вашего проекта!",
     },
   ];
+
   return (
     <div className="page">
       <div className="container">
@@ -51,7 +60,7 @@ function App() {
                     className="thunder__image thunder__image_left"
                   />
                 </div>
-                <div className="introduction__text introduction__text_yours">
+                <div className="introduction__text introduction__text_yours text-green">
                   <div>ваших</div>
                 </div>
                 <div className="thunder">
@@ -64,7 +73,7 @@ function App() {
               </div>
             </div>
             <div className="introduction__styled-heading">
-              <div className="introduction__text introduction__text_ideas">
+              <div className="introduction__text introduction__text_ideas text-yellow">
                 идей
               </div>
             </div>
@@ -110,15 +119,29 @@ function App() {
         </div> */}
 
         <div className="why-us">
-          <div className="why-us__grid-container">
-            <div className="why-us__card">
-              <Card title="Почему мы" />
+          <div className="why-us__container">
+            <div className="why-us__left-content">
+              <div className="why-us__card">
+                <Card
+                  title="Почему мы"
+                  template="yellow"
+                  style={{ transform: "rotate(4deg)" }}
+                  isScribble
+                />
+              </div>
+              <div className="why-us__text-container">
+                <div className="why-us__text">Признайте успех,</div>
+                <div className="why-us__text">- стремитесь к большему.</div>
+              </div>
+              <div className="why-us__button">
+                <DefaultButton text="Начать проект" />
+              </div>
             </div>
             <div className="why-us__card-column">
               {cards.map(({ title, subtitle, text }) => {
                 const style: React.CSSProperties = { width: "340px" };
                 return (
-                  <div className="why-us__item">
+                  <div className="why-us__item" key={title}>
                     <Card
                       key={title}
                       title={title}
@@ -130,13 +153,6 @@ function App() {
                 );
               })}
             </div>
-            <div className="why-us__text-container">
-              <div className="why-us__text">Признайте успех,</div>
-              <div className="why-us__text">- стремитесь к большему.</div>
-            </div>
-            <div className="why-us__button">
-              <DefaultButton text="Начать проект" />
-            </div>
           </div>
         </div>
 
@@ -145,7 +161,9 @@ function App() {
             <Card
               title="Услуги"
               template="yellow"
+              style={{ transform: "rotate(-6deg)" }}
               angleSettings={{ src: classicWhiteAngle }}
+              isScribble
             />
           </div>
           <div className="services__text-container">
@@ -154,17 +172,22 @@ function App() {
             <div className="services__text">а ваше удовлетворение</div>
           </div>
           <div className="services__cards">
-            <div className="services__card">
-              <Card title="services" />
+            <div className="services__service-card">
+              <Card title="Сайты" template="service" icon={Site} />
             </div>
-            <div className="services__card">
-              <Card title="services" />
+            <div className="services__service-card">
+              <Card title="Боты" template="service" icon={Robot} />
             </div>
-            <div className="services__card">
-              <Card title="services" />
+            <div className="services__service-card">
+              <Card
+                title="Интеграция готовых"
+                text="решений"
+                template="service"
+                icon={Abstract}
+              />
             </div>
-            <div className="services__card">
-              <Card title="services" />
+            <div className="services__service-card">
+              <Card title="Разработка ПО" template="service" />
             </div>
           </div>
           <div className="services__button">
@@ -174,34 +197,81 @@ function App() {
 
         <div className="our-work">
           <div className="our-work__card">
-            <Card title="Наши работы" template="yellow" />
+            <Card
+              title="Наши работы"
+              template="yellow"
+              style={{ transform: "rotate(4deg)" }}
+              isScribble
+            />
           </div>
           <div className="our-work__row">
             <div className="our-work__work-item">
-              <Card title="work" template="work" />
+              <Card
+                text="Сайт сантех.рф - Лендинг конструктор для магазина сантехники."
+                template="work"
+                icon={Site}
+                workImage={workImage1}
+                style={{ width: 355, transform: "rotate(-7deg)" }}
+              />
             </div>
             <div className="our-work__work-item">
-              <Card title="work" template="work" />
+              <Card
+                text="@CryptoBot - бот для обмена криптовалютой."
+                template="work"
+                icon={Robot}
+                workImage={workImage2}
+                style={{ width: 355, transform: "rotate(4deg)", marginTop: 60 }}
+              />
             </div>
             <div className="our-work__work-item">
-              <Card title="work" template="work" />
+              <Card
+                text="ПО для заводов “Сигареты и табак”, автоматизация станков."
+                template="work"
+                icon={Cube}
+                workImage={workImage3}
+                style={{
+                  width: 355,
+                  transform: "rotate(-3deg)",
+                  alignItems: "end",
+                }}
+              />
             </div>
           </div>
-          <DefaultButton text="Начать проект" />
+          <div className="our-work__button">
+            <DefaultButton text="Начать проект" />
+          </div>
         </div>
 
         <div className="end-section">
           <div className="end-section__header">
-            <div className="end-section__item">Давайте</div>
-            <div className="end-section__item">работать</div>
-            <div className="end-section__item">Вместе</div>
+            <div className="end-section__styled-heading">
+              <div className="end-section__item text-white end-section__come-on">
+                Давайте
+              </div>
+            </div>
+            <div className="end-section__styled-heading">
+              <div className="end-section__item text-green end-section__work">
+                работать
+              </div>
+            </div>
+            <div className="end-section__styled-heading">
+              <div className="end-section__item text-yellow end-section__together">
+                Вместе
+              </div>
+            </div>
           </div>
           <div className="end-section__center">
             <div className="end-section__button">
               <DefaultButton text="Начать проект" />
             </div>
             <div className="end-section__contacts">
-              <Card title="Контакты" />
+              <Card
+                title="Контакты"
+                subtitle="Юр. адрес:  ул. Пушкина, д8, к23"
+                text="Телефон: +7(999)666-66-66"
+                template="contacts"
+                style={{ width: 700 }}
+              />
             </div>
           </div>
           <div className="end-section__footer">

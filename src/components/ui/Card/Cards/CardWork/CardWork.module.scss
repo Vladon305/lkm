@@ -1,0 +1,30 @@
+.card {
+  @apply p-7 rounded-xl relative;
+  font-family: Plus Jakarta Sans;
+  background-color: #fff;
+
+  .title {
+    @apply mb-9;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    color: #00252e;
+  }
+  .subtitle {
+    @apply mb-4;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #000;
+  }
+  .text {
+    @apply mt-3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #717171;
+  }
+  .icon {
+    @apply absolute -top-[2.75rem] -left-[2.75rem] w-[70px];
+  }
+}
